@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateSlide() {
-    slideImage.src = `/MEGALIB/Assets/slide${currentSlide + 1}.png`;
+    slideImage.src = `/MEGALIB/Assets/slide2.png`;
   }
 
   const nextBtn = document.getElementById('nextBtn');
