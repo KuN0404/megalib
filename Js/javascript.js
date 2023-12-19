@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateSlide() {
-    slideImage.src = `./Assets/slide${currentSlide + 1}.png`;
+    slideImage.src = `/Assets/slide${currentSlide + 1}.png`;
   }
 
   const nextBtn = document.getElementById('nextBtn');
