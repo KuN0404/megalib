@@ -1,0 +1,234 @@
+@import url('https://fonts.cdnfonts.com/css/evogria');
+@font-face {
+  font-family: 'Evogria Italic';
+  src: url('https://db.onlinewebfonts.com/t/d36c7d0c10f155b89b12bf6b36676f60.eot');
+  src: url('https://db.onlinewebfonts.com/t/d36c7d0c10f155b89b12bf6b36676f60.eot?#iefix') format('embedded-opentype'), url('https://db.onlinewebfonts.com/t/d36c7d0c10f155b89b12bf6b36676f60.woff2') format('woff2'),
+    url('https://db.onlinewebfonts.com/t/d36c7d0c10f155b89b12bf6b36676f60.woff') format('woff'), url('https://db.onlinewebfonts.com/t/d36c7d0c10f155b89b12bf6b36676f60.ttf') format('truetype'),
+    url('https://db.onlinewebfonts.com/t/d36c7d0c10f155b89b12bf6b36676f60.svg#Evogria Italic') format('svg');
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  #backgroundimage {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  #backgroundimage {
+    height: 50vh;
+  }
+
+  nav {
+    height: 50px;
+  }
+
+  nav #megalib img {
+    height: 100px;
+  }
+
+  nav li {
+    margin: 0 5px;
+  }
+
+  nav li button {
+    padding: 4px 15px;
+  }
+
+  #search-box {
+    width: 100px;
+  }
+
+  #slide-img {
+    left: 50%;
+  }
+
+  #download {
+    right: 50%;
+  }
+}
+
+body {
+  font-family: 'Evogria', sans-serif;
+  margin: 0;
+}
+
+#backgroundimage {
+  position: fixed;
+  top: -55px;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  background-image: url('../Assets/background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav #megalib img {
+  height: 150px;
+  padding-top: 10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+  position: relative;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: red;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+}
+
+#search-box {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: 'Evogria italic';
+  background-color: #00a9ff;
+  color: white;
+  border: 1px solid white;
+  width: 140px;
+  position: relative;
+}
+
+#search-box::placeholder {
+  color: white;
+}
+
+#kaca {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#kaca img {
+  width: 21px;
+  padding-right: 12px;
+  padding-top: 4px;
+}
+
+nav li button {
+  background-color: #00a9ff;
+  color: white;
+  border: 1px solid white;
+  padding: 4px 25px;
+  margin-right: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Evogria';
+}
+
+nav li button:hover {
+  background-color: white;
+  color: #00a9ff;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 0px;
+  padding: 10px;
+  position: fixed;
+  bottom: -2px;
+  width: 100%;
+  font-family: 'Evogria';
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+
+#slide-img {
+  position: fixed;
+  left: 23%;
+  top: 13%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#slide-img button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+}
+
+#slide-img img {
+  width: 45vw;
+  height: auto;
+  transition: transform 1s ease-in-out;
+}
+
+#download {
+  position: fixed;
+  right: 20%;
+  top: 26%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+#download h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+#download img {
+  width: 220px;
+  height: 65px;
+}

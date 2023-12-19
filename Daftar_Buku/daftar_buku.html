@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda</title>
+    <link rel="stylesheet" href="../Css/Daftar_Buku.css" />
+    <style>
+      #all {
+        margin-top: -40px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1980px;
+        margin-bottom: 20px;
+        padding-bottom: 150px;
+      }
+
+      #daftar {
+        max-width: 50px;
+        margin-left: 40px;
+        margin-top: -150px;
+      }
+
+      #buku {
+        width: 80px;
+        border-spacing: 10px;
+      }
+
+      #buku td {
+        width: 0px;
+      }
+
+      #buku .kiri {
+        text-align: left;
+      }
+
+      #buku .kanan {
+        text-align: right;
+      }
+
+      #buku img {
+        width: 600px;
+        height: 400px;
+        display: block;
+        margin-bottom: -300px;
+        z-index: 1;
+      }
+
+      #cover {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        width: 20px;
+        height: 10px;
+        margin-left: 0px;
+      }
+
+      #cover img {
+        width: 70px;
+        height: auto;
+        z-index: 3;
+        margin-top: 194px;
+        padding-right: 484px;
+        margin-left: 58px;
+      }
+
+      .cov-kiri-kanan-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20px;
+        height: 10px;
+        margin-left: 50px;
+      }
+
+      .cov-kiri-kanan-1 img {
+        width: 100%;
+        height: auto;
+      }
+
+      .judul-kiri-1 {
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .judul-kiri-1 p {
+        justify-content: center;
+      }
+
+      .kanan-cov img {
+        margin-left: 30px;
+      }
+
+      #cover-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        width: 20px;
+        height: 10px;
+        margin-left: 0px;
+      }
+
+      #cover-2 img {
+        width: 70px;
+        height: auto;
+        z-index: 3;
+        margin-top: 395px;
+        padding-right: 484px;
+        margin-left: 58px;
+      }
+
+      .cov-kiri-kanan-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20px;
+        height: 10px;
+        margin-left: 50px;
+      }
+
+      .cov-kiri-kanan-2 img {
+        width: 100%;
+        height: auto;
+      }
+
+      #cover-3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        width: 20px;
+        height: 10px;
+        margin-left: 0px;
+      }
+
+      #cover-3 img {
+        width: 70px;
+        height: auto;
+        z-index: 3;
+        margin-bottom: -600px;
+        padding-right: 484px;
+        margin-left: 58px;
+      }
+
+      .cov-kiri-kanan-3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20px;
+        height: 10px;
+        margin-left: 50px;
+      }
+
+      .cov-kiri-kanan-3 img {
+        width: 100%;
+        height: auto;
+      }
+
+      #cover-4 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        width: 20px;
+        height: 10px;
+        margin-left: 0px;
+      }
+
+      #cover-4 img {
+        width: 70px;
+        height: auto;
+        z-index: 3;
+        margin-bottom: -805px;
+        padding-right: 484px;
+        margin-left: 58px;
+      }
+
+      .cov-kiri-kanan-4 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20px;
+        height: 10px;
+        margin-left: 50px;
+      }
+
+      .cov-kiri-kanan-4 img {
+        width: 100%;
+        height: auto;
+      }
+
+      #judul-utama {
+        position: absolute;
+        padding-right: 20px;
+        top: 80px;
+        left: 200px;
+        z-index: 4;
+      }
+
+      #judul-utama p {
+        margin-bottom: -10px;
+      }
+
+      .main-judul {
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      #judul-utama .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-utama .main-judul a:hover {
+        color: red;
+      }
+
+      .sub-judul {
+        font-size: 12px;
+        color: rgb(235, 226, 226);
+      }
+
+      #judul-2 {
+        position: absolute;
+        padding-right: 20px;
+        top: 0px;
+        right: -615px;
+        z-index: 4;
+      }
+
+      #judul-2 p {
+        margin-bottom: -10px;
+      }
+
+      #judul-2 .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-2 .main-judul a:hover {
+        color: red;
+      }
+
+      #judul-3 {
+        position: absolute;
+        padding-right: 20px;
+        top: 193px;
+        left: 200px;
+        z-index: 4;
+      }
+
+      #judul-3 p {
+        margin-bottom: -10px;
+      }
+
+      #judul-3 .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-3 .main-judul a:hover {
+        color: red;
+      }
+
+      #judul-4 {
+        position: absolute;
+        padding-right: 20px;
+        top: 0px;
+        right: -595px;
+        z-index: 4;
+      }
+
+      #judul-4 p {
+        margin-bottom: -10px;
+      }
+
+      #judul-4 .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-4 .main-judul a:hover {
+        color: red;
+      }
+
+      #judul-5 {
+        position: absolute;
+        padding-right: 20px;
+        bottom: -112px;
+        left: -610px;
+        z-index: 4;
+      }
+
+      #judul-5 p {
+        margin-bottom: -10px;
+      }
+
+      #judul-5 .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-5 .main-judul a:hover {
+        color: red;
+      }
+
+      #judul-6 {
+        position: absolute;
+        padding-right: -100px;
+        bottom: -118px;
+        right: 170px;
+        z-index: 4;
+      }
+
+      #judul-6 p {
+        margin-bottom: -10px;
+      }
+
+      #judul-6 .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-6 .main-judul a:hover {
+        color: red;
+      }
+
+      #judul-7 {
+        position: absolute;
+        padding-right: 20px;
+        bottom: -223px;
+        left: -610px;
+        z-index: 4;
+      }
+
+      #judul-7 p {
+        margin-bottom: -10px;
+      }
+
+      #judul-7 .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-7 .main-judul a:hover {
+        color: red;
+      }
+
+      #judul-8 {
+        position: absolute;
+        padding-right: 20px;
+        bottom: -230px;
+        right: 135px;
+        z-index: 4;
+      }
+
+      #judul-8 p {
+        margin-bottom: -10px;
+      }
+
+      #judul-8 .main-judul a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #judul-8 .main-judul a:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="backgroundimage"></div>
+    <nav>
+      <div id="megalib">
+        <img src="../Assets/LOGO MEGALIB.psd.png" alt="megalib.png" />
+      </div>
+      <ul>
+        <li><a href="../beranda-logout.html">BERANDA</a></li>
+        <li><a href="../Daftar_Buku/daftar_buku.html">DAFTAR BUKU</a></li>
+        <li id="search">
+          <input type="text" id="search-box" placeholder="SEARCH..." />
+          <span id="kaca"><img src="../Assets/kaca.png" alt="kaca.png" /></span>
+        </li>
+        <li>
+          <a href="../Login/login.html"><button>LOGOUT</button></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="all">
+      <div id="cover">
+        <div class="cov-kiri-kanan-1">
+          <div class="judul-kiri-1">
+            <img src="../Assets/Daftar Buku/buku_programing.png" alt="" />
+            <img src="../Assets/Daftar Buku/buku_rpl.png" alt="" class="kanan-cov" />
+          </div>
+        </div>
+      </div>
+
+      <div id="judul-utama">
+        <p class="main-judul"><a href="https://repository.bsi.ac.id/index.php/unduh/item/312193/BOOK-web-programming.pdf">WEB PROGRAMMING</a></p>
+        <p class="sub-judul">
+          Membahas mengenai konsep dasar pemrograman web, istilah-<br />
+          istilah dalam pemrograman web, menggunakan text editor, ...
+        </p>
+        <div id="judul-2">
+          <p class="main-judul"><a href="https://sipeg.unj.ac.id/repository/upload/buku/HAKI_MODUL_RPL.pdf">RPL</a></p>
+          <p class="sub-judul">
+            Mata kuliah Rekayasa Perangkat Lunak (RPL) adalah mata kuliah <br />
+            yang termasuk dalam disiplin ilmu engineering yang...
+          </p>
+        </div>
+      </div>
+
+      <div id="cover-2">
+        <div class="cov-kiri-kanan-2">
+          <div class="judul-kiri-1">
+            <img src="../Assets/Daftar Buku/buku_sti.png" alt="" />
+            <img src="../Assets/Daftar Buku/buku_doc.png" alt="" class="kanan-cov" />
+          </div>
+        </div>
+      </div>
+
+      <div id="judul-3">
+        <p class="main-judul"><a href="https://digilib.stekom.ac.id/assets/dokumen/ebook/feb_03b5d0f2132165623e1a371abf6014a1b2ba1149_1652868351.pdf">Sistem Informasi</a></p>
+        <p class="sub-judul">
+          Buku ini berisikan pengenalan pengertian dasar, peran sistem<br />
+          analis, tahapan dan hal-hal yang harus...
+        </p>
+
+        <div id="judul-4">
+          <p class="main-judul"><a href="https://neurologiudayana.com/wp-content/uploads/2022/01/14.-Buku-Panduan-Departemen-Ilmu-Kedokteran-Forensik-dan-Medikolegal.pdf">ILMU KEDOKTERAN FORENSIK</a></p>
+          <p class="sub-judul">
+            Buku ini pada dasarnya merupakan kumpulan materi-materi<br />
+            ajar Ilmu Kedokteran Forensik yang diselenggarakan di...
+          </p>
+
+          <div id="judul-5">
+            <p class="main-judul"><a href="https://play.google.com/store/books/details/Is_Yuniarto_re_ON_Vol_01?id=ocilDwAAQBAJ">re:ON Vol. 01 (reON Comics)</a></p>
+            <p class="sub-judul">
+              Edisi perdana re:ON Comics yang telah sold out versi cetaknya,<br />
+              kini tersedia versi digitalnya di Google Play Books!...
+            </p>
+          </div>
+
+          <div id="judul-6">
+            <p class="main-judul"><a href="https://play.google.com/store/books/details/Ibnu_Daqiqil_Id_MACHINE_LEARNING_Teori_Studi_Kasus?id=JvBPEAAAQBAJ">MACHINE LEARNING</a></p>
+            <p class="sub-judul">
+              Machine Learning (ML) sudah menjadi bagian <br />
+              dalam kehidupan sehari-hari...
+            </p>
+          </div>
+
+          <div id="judul-7">
+            <p class="main-judul"><a href="https://play.google.com/store/books/details/Bona_Tua_Node_js_Handbook?id=9WhZDwAAQBAJ">NODE.JS</a></p>
+            <p class="sub-judul">
+              Buku Ini untuk mereka yang ingin membaca buku,masa sih. Untuk <br />
+              mereka yang mulai belajar Node.js.Bahasa yang...
+            </p>
+          </div>
+
+          <div id="judul-8">
+            <p class="main-judul"><a href="https://play.google.com/store/books/details/Wandah_Wibawanto_Game_Edukasi_RPG_Role_Playing_Gam?id=fofwDwAAQBAJ">GAME EDUKASI RPG</a></p>
+            <p class="sub-judul">Game Digital (komputer, konsol dan mobilephone) merupakan salah satu media yang...</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="cover-3">
+        <div class="cov-kiri-kanan-3">
+          <div class="judul-kiri-1">
+            <img src="../Assets/Daftar Buku/buku_komik.png" alt="" />
+          </div>
+          <img src="../Assets/Daftar Buku/buku_ml.png" alt="" class="kanan-cov" />
+        </div>
+      </div>
+
+      <div id="cover-4">
+        <div class="cov-kiri-kanan-4">
+          <div class="judul-kiri-1">
+            <img src="../Assets/Daftar Buku/buku_node.png" alt="" />
+          </div>
+          <img src="../Assets/Daftar Buku/buku_rpg.png" alt="" class="kanan-cov" />
+        </div>
+      </div>
+
+      <div id="daftar">
+        <table id="buku">
+          <tr>
+            <td class="kiri">
+              <img src="../Assets/Daftar Buku/hitam.png" alt="" />
+            </td>
+            <td class="kanan">
+              <img src="../Assets/Daftar Buku/putih.png" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="kiri">
+              <img src="../Assets/Daftar Buku/hitam.png" alt="" />
+            </td>
+            <td class="kanan">
+              <img src="../Assets/Daftar Buku/putih.png" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="kiri">
+              <img src="../Assets/Daftar Buku/hitam.png" alt="" />
+            </td>
+            <td class="kanan">
+              <img src="../Assets/Daftar Buku/putih.png" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="kiri">
+              <img src="../Assets/Daftar Buku/hitam.png" alt="" />
+            </td>
+            <td class="kanan">
+              <img src="../Assets/Daftar Buku/putih.png" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <footer>
+      <p>@COPYRIGHT BY KELOMPOK 1</p>
+    </footer>
+  </body>
+</html>

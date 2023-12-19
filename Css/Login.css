@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Open Sans');
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  #backgroundimage {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  #backgroundimage {
+    height: 50vh;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#backgroundimage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../Assets/login/background.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -3;
+}
+
+#form {
+  background-image: url('../Assets/login/form.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1600px;
+  width: 500px;
+  height: 800px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+  margin-right: 25px;
+}
+#form img {
+  position: absolute;
+  left: 15px;
+  top: 106px;
+  width: 510px;
+}
+#icon-e {
+  position: absolute;
+  left: 72px;
+  top: 163px;
+}
+
+#icon-e img {
+  width: 150px;
+  padding-right: 12px;
+  padding-top: 4px;
+}
+
+#email {
+  position: absolute;
+  left: 147px;
+  top: 304px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  background: linear-gradient(to bottom, transparent 90%, white 2%);
+  z-index: 2;
+  padding-left: 35px;
+}
+
+#email::placeholder {
+  color: white;
+  font-family: 'Open Sans';
+  transform: translateY(-15%);
+}
+
+#icon-k {
+  position: absolute;
+  left: 73px;
+  bottom: 550px;
+}
+
+#icon-k img {
+  width: 150px;
+  padding-right: 12px;
+  padding-top: 4px;
+}
+
+#password {
+  position: absolute;
+  left: 147px;
+  bottom: 380px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  background: linear-gradient(to bottom, transparent 90%, white 2%);
+  z-index: 2;
+  padding-left: 35px;
+}
+
+#password::placeholder {
+  color: white;
+  font-family: 'Open Sans';
+  transform: translateY(-15%);
+}
+
+#form-bawah {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 165px;
+  bottom: 340px;
+  width: 240px;
+}
+
+.checkbox-rect input[type='checkbox'] {
+  display: none;
+}
+
+.checkbox-rect input[type='checkbox'] + label {
+  display: block;
+  position: relative;
+  padding-left: 0px;
+  margin-top: 2px;
+  margin-right: 20px;
+  margin-bottom: 2px;
+  font-family: 'Open Sans';
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.checkbox-rect input[type='checkbox']:hover + label:hover {
+  color: rgb(23, 86, 228);
+}
+
+.checkbox-rect input[type='checkbox']:hover + label:before {
+  background: #50565a;
+  box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+}
+
+.checkbox-rect input[type='checkbox'] + label:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox-rect input[type='checkbox'] + label:before {
+  content: '';
+  display: block;
+  width: 0.9em;
+  height: 0.9em;
+  border: 1px solid #343a3f;
+  border-radius: 0.2em;
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+  transition: all 0.2s, background 0.2s ease-in-out;
+  background: #f3f3f3;
+}
+
+.checkbox-rect input[type='checkbox']:checked + label:before {
+  content: '✓';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.9em;
+  height: 0.9em;
+  border: 2px solid #fff;
+  border-radius: 0.2em;
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+  transition: all 0.2s, background 0.2s ease-in-out;
+  background: #343a3f;
+}
+
+p {
+  margin: 0;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 13px;
+}
+
+#forgot {
+  position: absolute;
+  right: 15px;
+  bottom: 340px;
+  width: 240px;
+  font-style: italic;
+}
+#logback {
+  position: absolute;
+  bottom: 148px;
+  left: 168px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aksi {
+  margin: 3px;
+  width: 220px;
+  height: 55px;
+}
