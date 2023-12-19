@@ -1,30 +1,36 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const slideImage = document.getElementById('slideImage');
-  let currentSlide = 0;
+onload = function () {
+  var e,
+    i = 0;
+  e = document.getElementById('slide-img').getElementsByTagName('div');
+  while (e[i++]) {
+    e.onmouseover = function () {
+      clearTimeout(t);
+    };
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % 2;
-    updateSlide();
+    e.onmouseout = function () {
+      t = setTimeout('timedCount()', timeOut);
+    };
   }
+};
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + 2) % 2;
-    updateSlide();
-  }
+c = 0;
+timeOut = 5000;
+var t;
+t = setTimeout('timedCount()', timeOut);
 
-  function updateSlide() {
-    if (currentSlide === 0) {
-      slideImage.src = '.Assets/slide1.png';
-    } else if (currentSlide === 1) {
-      slideImage.src = './Assets/slide2.png';
+function timedCount() {
+  var getImage = document.getElementById('slide-img').getElementsByTagName('div');
+  img = getImage.length - 1;
+  for (var a = 0; a < getImage.length; a++) {
+    if (getImage[a].className.indexOf('active') == 0) {
+      getImage[a].className = 'inactive';
+      c = a;
     }
   }
-
-  const nextBtn = document.getElementById('nextBtn');
-  const prevBtn = document.getElementById('prevBtn');
-
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-
-  setInterval(nextSlide, 3200);
-});
+  c++;
+  if (c > img) {
+    c = 0;
+  }
+  getImage[c].className = 'active';
+  t = setTimeout('timedCount()', timeOut);
+}
