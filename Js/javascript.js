@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateSlide() {
-    slideImage.src = `/MEGALIB/Assets/slide2.png`;
+    if (currentSlide === 0) {
+      slideImage.src = '.Assets/slide1.png';
+    } else if (currentSlide === 1) {
+      slideImage.src = './Assets/slide2.png';
+    }
   }
 
   const nextBtn = document.getElementById('nextBtn');
